@@ -58,6 +58,35 @@ dev.cur()
 dev.copy(png, file = "geyserplot.png")
 dev.off()
 
+head(cars)
+with(cars, plot(speed, dist))
+?text
+text(1:1)
+text(mean(cars$speed),max(cars$dist),"SWIRL rules!")
+head(state)
+table(state$region)
+xyplot(Life.Exp ~ Income | region, data = state, layout = c(4,1))
+xyplot(Life.Exp ~ Income | region, data = state, layout = c(2,2))
+
+head(mpg)
+dim(mpg)
+table(mpg$model)
+
+library(ggplot2)
+qplot(displ, hwy, data = mpg)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
