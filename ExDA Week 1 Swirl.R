@@ -41,3 +41,35 @@ plot(west$latitude, west$pm25, main = "west")
 plot(west$latitude, west$pm25, main = "West")
 east <- subset(pollution, region == "east")
 plot(east$latitude, east$pm25, main = "East")
+
+?devices
+?Devices
+library(datasets)
+with(faithful, plot(eruptions, waiting, main = "Old Faithful Geyser Data"))
+title(main = "Old Faithful Geyser data")
+dev.cur()
+pdf(file="myplot.pdf")
+with(faithful, plot(eruptions, waiting, main = "Old Faithful Geyser Data"))
+with(faithful, plot(eruptions, waiting))
+title(main = "Old Faithful Geyser data")
+dev.cur()
+dev.off()
+dev.cur()
+dev.copy(png, file = "geyserplot.png")
+dev.off()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
